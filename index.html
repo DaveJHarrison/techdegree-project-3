@@ -26,29 +26,42 @@
 			<!-- End of banner div -->
 
 
-		<hr class="contact-info">
+			<hr class="contact-info">
 
 			<!-- Start of form -->
 			<form action="index.html" method="post">
-				<!-- Start of contact fieldset -->
-				<fieldset class="contact-section">
-					<legend>Contact Information</legend>
-					  <label for="name">Full Name</label>
-					  <input type="text" id="name" name="user_name" placeholder="Required " required>
+			<!-- Start of contact fieldset -->
 
-					  <label for="mail">Email Address</label>
-					  <input type="email" id="mail" name="user_email" placeholder="Required " required>
+				<fieldset class="contact-section clearfix">
+					<legend class="first-legend clearfix">Contact Information</legend>
 
-						<label for="phoneNo">Phone Number</label>
+			  	<div class="desktop clearfix">
+						<label class="space" for="name">Full Name</label>
+				  	<input type="text" id="name" name="user_name" placeholder="Required " required>
+					</div>
+
+			  	<div class="desktop">
+				  	<label class="space" for="mail">Email Address</label>
+				  	<input type="email" id="mail" name="user_email" placeholder="Required " required>
+					</div>
+
+			  	<div class="desktop">
+						<label class="space" for="phoneNo">Phone Number</label>
 						<input type="tel" id="phoneNo" name="user_phone" placeholder="Required " required>
+					</div>
 
-						<label for="street">Street Address</label>
+			  	<div class="desktop">
+						<label class="space" for="street">Street Address</label>
 						<input type="text" id="street" name="street_address">
+					</div>
 
-						<label for="city">City</label>
+			  	<div class="desktop">
+						<label class="space" for="city">City</label>
 						<input type="text" id="city" name="user_city">
+					</div>
 
-						<label for="state">State</label>
+			  	<div class="desktop">
+						<label class="space" for="state">State</label>
 						<select id="state" name="user_state">
 							<option value="" disabled selected>Choose State</option>
 							<option value="al">Alabama</option>
@@ -102,36 +115,41 @@
 							<option value="wi">Wisconsin</option>
 							<option value="wy">Wyoming</option>
 						</select><br />
+					</div>
 
-						<label for="zipCode">Zip Code</label>
-						<input type="text" id="zipCode" name="user_zipCode" placeholder="Required ">
+			  	<div class="desktop">
+						<label class="space" for="zipCode">Zip Code</label>
+						<input type="text" id="zipCode" name="user_zipCode">
+					</div>
 				</fieldset>
 				<!-- End of contact fieldset -->
 
 				<hr class="newsletter-info">
 
 				<!-- Start of newsletter fieldset -->
+
 				<fieldset class="newsletter-section">
-					<legend>Newsletter</legend>
-						<label class="after">Select the newsletters you would like to receive</label>
-							<input type="checkbox" id="htmlchk" name="user_newsletter" value="html_newsletter">
-							<label for="htmlchk" class="light">HTML News</label><br>
+					<legend class="second-legend">Newsletter</legend>
 
-							<input type="checkbox" id="css" name="user_newsletter" value="Massachusetts_newsletter">
-							<label for="css" class="light">CSS News</label><br>
+					<label class="after">Select the newsletters you would like to receive</label>
+						<input type="checkbox" id="htmlchk" name="user_newsletter" value="html_newsletter">
+						<label for="htmlchk" class="light">HTML News</label><br>
 
-							<input type="checkbox" id="javascript" name="user_newsletter" value="javascript_newsletter">
-							<label for="javascript" class="light">Javascript News</label><br>
+						<input type="checkbox" id="css" name="user_newsletter" value="css_newsletter">
+						<label for="css" class="light">CSS News</label><br>
 
-						<label class="after">Newsletter format</label>
-							<input type="radio" id="htmlrad" name="user_format" value="html_format">
-							<label for="htmlrad" class="light">HTML</label><br>
+						<input type="checkbox" id="javascript" name="user_newsletter" value="javascript_newsletter">
+						<label for="javascript" class="light">Javascript News</label><br>
 
-							<input type="radio" id="plainText" name="user_format" value="plainText_format">
-							<label for="plainText" class="light">Plain text</label><br>
+					<label class="after">Newsletter format</label>
+						<input type="radio" id="htmlrad" name="user_format" value="html_format">
+						<label for="htmlrad" class="light">HTML</label><br>
 
-						<label for="topics" class="after">Other topics you would like to hear about</label>
-							<textarea id="topics" name="user_topics"></textarea>
+						<input type="radio" id="plainText" name="user_format" value="plainText_format">
+						<label for="plainText" class="light">Plain text</label><br>
+
+					<label for="topics" class="after">Other topics you would like to hear about</label>
+						<textarea id="topics" name="user_topics"></textarea>
 
 				</fieldset>
 				<!-- End of newsletter fieldset -->
@@ -142,7 +160,7 @@
 			<!-- End of form -->
 
 		</div>
-		<!-- End of main-secondary container-->
+		<!-- End of main container-->
 
 		<!-- Start of footer -->
 		<div class="footer center">

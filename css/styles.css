@@ -26,37 +26,62 @@ h2 {
   font-weight: 600;
   padding-top: 1.25em;
   padding-bottom: .5em;
-  margin-top: 0;
+  margin: 0;
 }
 
 p {
   font-size: .9em;
   font-weight: lighter;
   color: #A9A9A9;
+  margin-top: 0;
 }
 
-legend {
+form legend {
+  float: left;
+  width: 100%;
   font-size: 1.25em;
   font-weight: 600;
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 1.25em 0.8em 1.25em 0;
+  border-top-left-radius: .25em;
+  border-top-right-radius: .25em;
+  margin: 0;
+ }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select[id="state"]:focus,
+input[type="checkbox"]:focus,
+button[type="radio"]:focus,
+textarea:focus {
+  background-color: #99ddff;
+  border: 6px solid black;
 }
 
 fieldset {
   border: none;
+  margin: 0;
 }
 
+/* legend {
+  width: 100%;
+  font-size: 1.25em;
+  font-weight: 600;
+  padding: 1.25em .8em;
+  border-top-left-radius: .25em;
+  border-top-right-radius: .25em;
+  margin: 0;
+} */
+
 label {
-  display: block;
-  margin-bottom: 8px;
+  display: inline-block;
+  margin-bottom: .6em;
   font-size: .9em;
   font-weight: lighter;
   color: #A9A9A9;
 }
 
-label.light {
+.light {
   display: inline;
   font-weight: lighter;
   color: #A9A9A9;
@@ -79,26 +104,27 @@ label.light {
 }
 
 .banner {
-  padding-bottom: 1.25em;
-  margin: 0 auto;
+  padding-bottom: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0 auto .6em;
   background: #fff;
-  border-top-left-radius: .25em;
-  border-top-right-radius: .25em;
+  border-radius: .25em;
 }
 
 .contact-section {
   background: #ccfff5;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
   margin: 0 auto;
+  border-radius: .25em;
 }
 
 .newsletter-section {
   background: #e6ffff;
-  padding-left: .5em;
-  padding-right: .5em;
-  border-bottom-left-radius: .25em;
-  border-bottom-right-radius: .25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: .25em;
   margin: 0 auto;
 }
 
@@ -107,17 +133,17 @@ label.light {
 }
 
 hr.contact-info {
-  border-top: 4px solid black;
-  border-bottom: 2px solid black;
+  border-top: 4px solid white;
+  border-bottom: 2px solid white;
   height: .2em;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 hr.newsletter-info {
-  border-top: 2px solid black;
-  margin-top: 0;
-  margin-bottom: 0;
+  border-top: 2px solid white;
+  margin-top: .6em;
+  margin-bottom: .6em;
 }
 
 .after {
@@ -147,6 +173,7 @@ button {
   border-radius: .25em;
   width: 100%;
   font-size: .8em;
+  text-align: left;
   padding: .25em 1em;
   margin-bottom: 1em;
   margin-top: .2em;
@@ -179,10 +206,47 @@ textarea {
   height: 8em;
 }
 
+
+/* Float Clearfix */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
   .main-content {
-    max-width: 800px;
+    max-width: 960px;
   }
+  .banner {
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+  label {
+    display: block;
+  }
+  .desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .space {
+    flex: 0 30%;
+  }
+
+  .footer {
+    padding-top: 1.75em;
+    padding-bottom: 18em;
+  }
+
+
+
+
 }
